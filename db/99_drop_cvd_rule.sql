@@ -1,0 +1,12 @@
+-- ============================================================================
+-- 롤백용: 전환 닥터 전용 테이블 삭제. 기본적으로 전부 주석 처리되어 있다.
+-- 데이터가 모두 사라진다. 실행하려면 DBA 와 확인한 뒤 아래 주석을 직접 해제한다.
+-- 이 스크립트는 개발 과정에서 실제 DB 에 실행되지 않았다.
+-- ============================================================================
+
+-- ALTER TABLE CVD_RULE DROP CONSTRAINT CK_CVD_RULE_DELETED;
+-- ALTER TABLE CVD_RULE DROP COLUMN DELETE_REASON;
+-- ALTER TABLE CVD_RULE DROP COLUMN DELETED_AT;
+-- DROP INDEX IX_CVD_RULE_WSFN;
+-- DROP INDEX UX_CVD_RULE_FN_TGT;
+-- DROP TABLE CVD_RULE PURGE;

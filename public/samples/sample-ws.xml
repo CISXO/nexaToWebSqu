@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <!-- <script>ds_x.getRowCount();</script> 는 XML 주석이라 스캔 대상 아님 -->
+  <script type="text/javascript"><![CDATA[
+    function fnLoad() {
+        var c = ds_main.getRowCount();
+        dlt_list.demoClear();
+    }
+  ]]></script>
+</head>
+<body>
+  <textarea>dlt_list.demoClear()</textarea>
+</body>
+</html>

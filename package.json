@@ -1,0 +1,38 @@
+{
+  "name": "jjh-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "check:sample": "tsx scripts/check-sample.ts",
+    "check:seed": "tsx scripts/check-seed.ts",
+    "test:repo": "tsx scripts/contract-test.ts",
+    "check": "npm run check:seed && npm run check:sample && npm run test:repo",
+    "bench:scan": "tsx scripts/bench-scan.ts",
+    "db:import": "tsx db/import-json-to-oracle.ts"
+  },
+  "dependencies": {
+    "next": "16.3.5",
+    "oracledb": "^7.0.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/oracledb": "^7.0.3",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.5",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.13",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "_comment": "plan.md 12.2 / 12.3 / 12.4 정답표와 동일한 기대값. 개발이 임의로 완화하지 않는다. ref 는 시드 규칙 source 의 'REF-0N' 접두어로 규칙을 식별한다.",
+  "js": {
+    "file": "public/samples/sample-ws.js",
+    "lineCount": 41,
+    "summary": { "total": 15, "INTENT_DIFF": 6, "REPLACE": 8, "UNSUPPORTED": 1 },
+    "findings": [
+      { "line": 6,  "fn": "getRowCount", "ref": "REF-01", "ruleType": "INTENT_DIFF", "confidence": "CHECK", "side": "NEXA", "changeable": false },
+      { "line": 11, "fn": "demoAddRow",  "ref": "REF-02", "ruleType": "REPLACE",     "confidence": "TYPED", "side": "NEXA", "changeable": true },
+      { "line": 11, "fn": "demoAddRow",  "ref": "REF-03", "ruleType": "REPLACE",     "confidence": "CHECK", "side": "NEXA", "changeable": true },
+      { "line": 17, "fn": "demoSetCol",  "ref": "REF-04", "ruleType": "REPLACE",     "confidence": "CHECK", "side": "NEXA", "changeable": true },
+      { "line": 18, "fn": "demoClear",   "ref": "REF-05", "ruleType": "UNSUPPORTED", "confidence": "TYPED", "side": "NEXA", "changeable": false },
+      { "line": 19, "fn": "getCount",    "ref": "REF-01", "ruleType": "INTENT_DIFF", "confidence": "CHECK", "side": "WS",   "changeable": false },
+      { "line": 22, "fn": "getRowCount", "ref": "REF-01", "ruleType": "INTENT_DIFF", "confidence": "CHECK", "side": "NEXA", "changeable": false },
+      { "line": 23, "fn": "getRowCount", "ref": "REF-01", "ruleType": "INTENT_DIFF", "confidence": "CHECK", "side": "NEXA", "changeable": false },
+      { "line": 25, "fn": "getRowCount", "ref": "REF-01", "ruleType": "INTENT_DIFF", "confidence": "CHECK", "side": "NEXA", "changeable": false },
+      { "line": 35, "fn": "demoAddRow",  "ref": "REF-02", "ruleType": "REPLACE",     "confidence": "TYPED", "side": "NEXA", "changeable": true },
+      { "line": 35, "fn": "demoAddRow",  "ref": "REF-03", "ruleType": "REPLACE",     "confidence": "CHECK", "side": "NEXA", "changeable": true },
+      { "line": 36, "fn": "demoAddRow",  "ref": "REF-02", "ruleType": "REPLACE",     "confidence": "TYPED", "side": "NEXA", "changeable": true },
+      { "line": 36, "fn": "demoAddRow",  "ref": "REF-03", "ruleType": "REPLACE",     "confidence": "CHECK", "side": "NEXA", "changeable": true },
+      { "line": 40, "fn": "getRowCount", "ref": "REF-01", "ruleType": "INTENT_DIFF", "confidence": "CHECK", "side": "NEXA", "changeable": false },
+      { "line": 41, "fn": "demoGetCol",  "ref": "REF-06", "ruleType": "REPLACE",     "confidence": "TYPED", "side": "NEXA", "changeable": true }
+    ],
+    "noFindingLines": [2, 7, 8, 9, 10, 12, 20, 21, 31, 32, 33, 34],
+    "noFindingFnOnLine": [{ "line": 17, "fn": "demoClear" }],
+    "candidateCounts": [{ "line": 11, "count": 2 }, { "line": 35, "count": 2 }, { "line": 36, "count": 2 }, { "line": 41, "count": 1 }],
+    "change": {
+      "line41After": "var y = dma_form.demoGetCell(0, \"NAME\");",
+      "line17After": "    dma_form.demoSetCell(0, \"NAME\", \"abc\"); // dma_form.demoClear()",
+      "bulkDefaultCheckedLines": [41],
+      "bulkUncheckedLines": [17],
+      "bulkExcludedLines": [11, 35, 36],
+      "rescanTotalAfterLine41": 14,
+      "rescanTotalAfterLines17and41": 13
+    }
+  },
+  "xml": {
+    "file": "public/samples/sample-ws.xml",
+    "lineCount": 15,
+    "findings": [
+      { "line": 7, "fn": "getRowCount", "ref": "REF-01", "ruleType": "INTENT_DIFF", "confidence": "CHECK", "side": "NEXA", "changeable": false },
+      { "line": 8, "fn": "demoClear",   "ref": "REF-05", "ruleType": "UNSUPPORTED", "confidence": "TYPED", "side": "NEXA", "changeable": false }
+    ],
+    "noFindingLines": [4, 13]
+  }
+}
